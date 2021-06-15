@@ -4,8 +4,8 @@
       primary-title
       class="pa-5 pb-3 d-flex flex-nowrap justify-space-between"
     >
-      <p style="margin: 0">Tasks</p>
-      <v-menu bottom left>
+      <p style="margin: 0">Tasker</p>
+      <!-- <v-menu bottom left>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             icon
@@ -26,7 +26,7 @@
             }}</v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-menu>
+      </v-menu> -->
     </v-card-title>
     <v-card-text class="pa-5 pt-0 pb-2">
       <div class="row no-gutters">
@@ -49,7 +49,7 @@
                 class="d-flex justify-space-between align-center py-3 col col-12"
               >
                 <div class="d-flex align-center">
-                  <p
+                  <!-- <p
                     class="task-time mb-0"
                     style="font-size: 10px"
                     :style="{
@@ -59,7 +59,7 @@
                     }"
                   >
                     {{ today.time }}
-                  </p>
+                  </p> -->
                   <v-icon :color="today.color">mdi-circle-medium</v-icon>
                   <p
                     class="task-text greyBold--text mb-0 font-weight-medium"
@@ -141,43 +141,43 @@ export default {
       ],
       todayList: [
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Upload new photos to vacation folder',
           color: 'gray',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Share uploaded photos with family',
           color: 'red',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Add cool pictures in blog profile',
           color: 'green',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Re-arrange files alphabetically',
           color: 'blue',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Group folders according to share options',
           color: 'red',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Backup old files and folders to cloud',
           color: 'yellow',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'Add more users in my foldshare groups',
           color: 'red',
         },
         {
-          time: '10:21',
-          conten: 'Call conference with a New Client',
+          time: '00:00',
+          conten: 'View statistics for the week',
           color: 'pink',
         },
       ],
