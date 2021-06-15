@@ -24,25 +24,6 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-divider></v-divider>
-        <v-subheader class="mt-4 grey--text text--darken-1">{{
-          miniVariant ? 'TEMPL' : 'TEMPLATE'
-        }}</v-subheader>
-        <v-list-item
-          v-for="tem in templateItems"
-          :key="tem.text"
-          :to="tem.link"
-          color="primary"
-        >
-          <v-list-item-action>
-            <v-icon>mdi-{{ tem.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ tem.text }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
         <!-- <v-list-item class="mt-4" @click="isShowLoginForm = true">
           <v-list-item-action>
             <v-icon color="grey darken-1">mdi-lock</v-icon>
@@ -152,17 +133,17 @@
       <v-container class="px-0 px-md-1 container--fluid">
         <nuxt />
       </v-container>
-      <v-footer sheet class="px-0 mt-2 transparent">
+      <v-footer sheet class="footer px-0 mt-2 transparent">
         <div class="row no-gutters d-flex justify-space-between">
           <div>
             <v-btn class="primary--text transparent" :to="'#'"></v-btn>
-            <v-btn icon class="greyTint--text">
+            <v-btn icon class="greyTint--text transparent mb-2">
               Made with&nbsp;
               <v-icon color="yellow">mdi-heart</v-icon>
             </v-btn>
           </div>
           <div>
-            <h6>Copyright &copy; <script>document.write(new Date().getFullYear());</script>&nbsp;FoldShare Inc.</h6>
+            <h6>Copyright &copy; {{currentYear()}}&nbsp;FoldShare Inc.</h6>
           </div>
         </div>
       </v-footer>
@@ -218,29 +199,16 @@ export default {
       },
       isLogin: false,
       items: [
-        { icon: 'account-circle', text: 'Profile', link: '/' },
-        { icon: 'home', text: 'Dashboard', link: '/dashboard' },
-        { icon: 'cart', text: 'E-commerce', link: '/eCommerce' },
-        { icon: 'stamper', text: 'User', link: '/user' },
+        { icon: 'folder', text: 'FoldShare', link: '/' },
+        { icon: 'checkbox-multiple-blank-outline', text: 'Blog', link: '/blog' },
+        { icon: 'clipboard-text-outline', text: 'Files', link: '/files' },
+        { icon: 'chart-line', text: 'Statistics', link: '/stats' },
         {
-          icon: 'script-text-outline',
-          text: 'Documentation',
-          link: '/documentation',
+          icon: 'hexagram',
+          text: 'Sharing',
+          link: '/sharing',
         },
-      ],
-      templateItems: [
-        { icon: 'checkerboard', text: 'Core', link: '/core' },
-        { icon: 'table', text: 'Tables', link: '/tables' },
-        {
-          icon: 'checkbox-multiple-blank-outline',
-          text: 'UI Elements',
-          link: '/uiElements',
-        },
-        { icon: 'clipboard-text-outline', text: 'Forms', link: '/forms' },
-        { icon: 'chart-bar', text: 'Charts', link: '/charts' },
-        { icon: 'map', text: 'Maps', link: '/maps' },
-        { icon: 'hexagram', text: 'Extra', link: '/extra' },
-        { icon: 'folder', text: 'Menu Levels', link: '/menuLevels' },
+        { icon: 'power', text: 'Exit App', link: '/exit' },
       ],
       avatarList: [
         { text: 'Real-Time', icon: 'mdi-clock' },
@@ -268,8 +236,8 @@ export default {
       right: true,
       rightDrawer: false,
       username: 'Guest User',
-      emailMsg: 6,
-      bellMsg: 4,
+      emailMsg: 1,
+      bellMsg: 3,
       selectedItem: '',
       isShowSearch: false,
       searchMessage: '',
@@ -305,5 +273,13 @@ export default {
       this.isShowSearch = false
     },
   },
+  // Get current year
+    methods: {
+    currentYear() {
+      const current = new Date();
+      const date = `${current.getFullYear()}`;
+      return date;
+    }
+  }
 }
 </script>
