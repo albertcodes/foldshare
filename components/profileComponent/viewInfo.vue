@@ -1,6 +1,6 @@
 <template>
   <div class="mb-6 col col-12">
-    <v-card>
+    <v-card class="pb-3">
       <v-card-title
         primary-title
         class="pa-5 pb-3 d-flex flex-nowrap justify-space-between"
