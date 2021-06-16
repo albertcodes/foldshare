@@ -1,6 +1,6 @@
 <template>
   <div class="pb-0 pb-sm-3 col col-12" style="padding-top: 20px">
-        <v-card class="media-card v-sheet ma-1" style="min-height: 296px">
+    <v-card class="media-card v-sheet ma-1" style="min-height: 296px">
       <v-card-title
         primary-title
         class="pa-5 pb-3 d-flex flex-nowrap justify-space-between"
@@ -31,15 +31,15 @@
           </v-list>
         </v-menu> -->
       </v-card-title>
-      <v-card-text class="pa-5 pb-0 pt-5">
-        <div class="row pb-6 no-gutters">
+      <v-card-text class="pa-5 pb-0 pt-1">
+        <div class="row pb-2 no-gutters">
           <div
-            class="icon-list d-flex align-center flex-column col col-6 pb-6"
+            class="icon-list d-flex align-center flex-column col col-6 pb-4"
             v-for="item in iconList"
             :key="item.icon"
           >
-            <v-icon :color="item.color">mdi-{{ item.icon }}</v-icon>
-            <p class="nums">{{ item.nums }} {{ item.name }}</p>
+            <v-icon class="icons" :color="item.color">mdi-{{ item.icon }}</v-icon>
+            <p class="nums"><span>{{ item.nums }}</span> {{ item.name }}</p>
             <p></p>
           </div>
         </div>
@@ -66,22 +66,22 @@ export default {
       ],
       iconList: [
         {
-          icon: 'account-group',
+          icon: 'account-group-outline',
           nums: '1.4k',
           name: 'Shared',
-          color: 'green',
+          color: 'pink',
         },
         {
           icon: 'account-multiple-plus-outline',
           nums: '3',
           name: 'Groups',
-          color: 'yellow',
+          color: 'pink',
         },
         {
           icon: 'animation',
           nums: '506',
           name: 'Files',
-          color: 'yellow',
+          color: 'pink',
         },
         {
           icon: 'arrange-send-backward',
@@ -106,8 +106,18 @@ export default {
     &.nums {
       margin: 0;
       margin-top: 6px;
-      font-weight: 800;
+      font-weight: 500;
+    }
+    &.nums span {
+      font-weight: 900;
     }
   }
+}
+.icons {
+  background: yellow;
+  opacity: 0.8;
+  padding: 10px;
+  border-radius: 50%;
+  border: 3px dotted $v-app-base;
 }
 </style>
