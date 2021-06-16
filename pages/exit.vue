@@ -7,16 +7,18 @@
             <v-img
               src="error-triangle.png"
               height="102px"
-              width="102px"
-            ></v-img>
+              width="102px">
+            </v-img>
           </div>
           <div class="col col-10" style="padding: 6px">
             <p class="article-text greyBold--text error-text">
-              ! Sorry for the inconvinience. App cannot be exited at the moment.
+              <v-icon right class="mr-1" color="red"> mdi-alert-circle-outline </v-icon>
+              Sorry for the inconvinience. App cannot be exited at the moment.
             </p>
-            <v-btn color="blue" type="submit" style="color: black" href="/"
-              >⇦ Back to FoldShare</v-btn
-            >
+            <v-btn color="blue" type="submit" style="color: black" href="/">
+              <v-icon right class="mr-2"> mdi-arrow-left-circle </v-icon>
+              Back to FoldShare
+            </v-btn>
           </div>
         </div>
       </v-card-text>
@@ -42,9 +44,10 @@
               style="color: black"
               class="mt-6"
               href="https://avid.secure.force.com/pkb/articles/en_US/Troubleshooting/Open-PT-session-by-default"
-              target="_blank"
-              >★ Subscribe Now!</v-btn
-            >
+              target="_blank">
+              <v-icon right class="mr-2"> mdi-star </v-icon>
+              Subscribe Now!
+              </v-btn>
           </div>
         </div>
       </v-card-text>
