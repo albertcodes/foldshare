@@ -31,8 +31,8 @@
     <v-card-text class="pa-5 pt-0 pb-2">
       <div class="row no-gutters">
         <v-tabs v-model="tab">
-          <v-tabs-slider color="#ff4081"></v-tabs-slider>
-          <v-tab v-for="tasks in tasksList" :key="tasks.name">
+          <v-tabs-slider color="#5bc0de"></v-tabs-slider>
+          <v-tab v-for="tasks in tasksList" :key="tasks.name" style="color: #5bc0de">
             {{ tasks.name }}
           </v-tab>
         </v-tabs>
@@ -143,7 +143,7 @@ export default {
         {
           time: '00:00',
           conten: 'Upload new photos to vacation folder',
-          color: 'gray',
+          color: 'green',
         },
         {
           time: '00:00',
@@ -153,12 +153,12 @@ export default {
         {
           time: '00:00',
           conten: 'Add cool pictures in blog profile',
-          color: 'green',
+          color: 'red',
         },
         {
           time: '00:00',
           conten: 'Re-arrange files alphabetically',
-          color: 'blue',
+          color: 'red',
         },
         {
           time: '00:00',
@@ -168,7 +168,7 @@ export default {
         {
           time: '00:00',
           conten: 'Backup old files and folders to cloud',
-          color: 'yellow',
+          color: 'red',
         },
         {
           time: '00:00',
@@ -178,7 +178,7 @@ export default {
         {
           time: '00:00',
           conten: 'View statistics for the week',
-          color: 'pink',
+          color: 'red',
         },
       ],
     }
