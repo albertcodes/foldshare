@@ -199,15 +199,16 @@ export default {
       },
       isLogin: false,
       items: [
-        { icon: 'folder', text: 'FoldShare', link: '/' },
-        { icon: 'checkbox-multiple-blank-outline', text: 'Blog', link: '/blog' },
-        { icon: 'clipboard-text-outline', text: 'Files', link: '/files' },
-        { icon: 'chart-line', text: 'Statistics', link: '/stats' },
+        { icon: 'folder', text: 'Main', link: '/' },
+        { icon: 'file', text: 'Files', link: '/files' },
+        { icon: 'post-outline', text: 'Blog', link: '/blog' },
+        { icon: 'chart-tree', text: 'Statistics', link: '/stats' },
         {
-          icon: 'hexagram',
+          icon: 'account-switch',
           text: 'Sharing',
           link: '/sharing',
         },
+        { icon: 'delete-outline', text: 'Trash', link: '/trash' },
         { icon: 'power', text: 'Exit App', link: '/exit' },
       ],
       avatarList: [
