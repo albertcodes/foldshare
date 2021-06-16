@@ -4,7 +4,7 @@
       <v-card-title class="pa-5 pb-3">Folders</v-card-title>
       <v-card-text class="pa-5 pt-0">
         <v-tabs v-model="tab">
-          <v-tabs-slider color="#ff4081"></v-tabs-slider>
+          <v-tabs-slider color="#ffff00"></v-tabs-slider>
           <v-tab v-for="fold in folderList" :key="fold.name">
             {{ fold.name }}
           </v-tab>
@@ -196,5 +196,8 @@ export default {
       }
     }
   }
+}
+.v-tab {
+  color: yellow;
 }
 </style>
