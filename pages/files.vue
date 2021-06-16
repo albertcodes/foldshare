@@ -19,18 +19,16 @@
     <div class="row">
       <div
         class="col-md-6 col-lg-3 col-12"
-        v-for="(i, index) in productCardList"
+        v-for="(i, index) in fileCardList"
         :key="index"
       >
-        <productCard
+        <fileCard
           :url="i.img"
           :title="i.title"
           :subsTitle="i.subsTitle"
-          :money="i.money"
-          :star="i.star"
           :chip="i.chip"
           :chipColor="i.chipColor"
-        ></productCard>
+        ></fileCard>
       </div>
     </div>
   </div>
@@ -38,126 +36,82 @@
 
 <script>
 import selfSelect from '../components/selfSelect'
-import productCard from '../components/productCard'
+import fileCard from '../components/fileCard'
 export default {
   components: {
     selfSelect,
-    productCard,
+    fileCard,
   },
   data() {
     return {
       selectList: [
         {
-          items: ['foo', 'bar', 'fizz', 'buzz'],
-          values: 'foo',
-          label: 'Standard',
+          items: ['All', 'Images', 'Documents', 'Audio', 'Video'],
+          values: 'All',
+          label: 'Category',
         },
         {
-          items: ['foo', 'bar', 'fizz', 'buzz'],
-          values: 'foo',
-          label: 'Standard',
-        },
-        {
-          items: ['foo', 'bar', 'fizz', 'buzz'],
-          values: 'foo',
-          label: 'Standard',
-        },
-        {
-          items: ['foo', 'bar', 'fizz', 'buzz'],
-          values: 'foo',
-          label: 'Standard',
-        },
-        {
-          items: ['foo', 'bar', 'fizz', 'buzz'],
-          values: 'foo',
-          label: 'Standard',
-        },
-        {
-          items: ['foo', 'bar', 'fizz', 'buzz'],
-          values: 'foo',
-          label: 'Standard',
+          items: ['None', 'Recent', 'Starred'],
+          values: 'None',
+          label: 'Tags',
         },
       ],
-      productCardList: [
+      fileCardList: [
         {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/1.d374b7a3.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-          chip: 'New',
+          img: 'image.jpeg',
+          title: 'Beach',
+          subsTitle: 'Social/Vacation',
+          chip: 'Recent',
           chipColor: '#536dfe',
         },
         {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/2.e73e87dc.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-        },
-        {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/3.5a0325cf.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-          chip: 'New',
-          chipColor: '#536dfe',
-        },
-        {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/4.024cd005.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-        },
-        {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/5.c70fd61d.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-          chip: 'New',
-          chipColor: '#536dfe',
-        },
-        {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/6.88f081e4.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-          chip: 'Sale',
+          img: 'document.jpeg',
+          title: 'Template',
+          subsTitle: 'Work/Web',
+          chip: 'Starred',
           chipColor: '#ff699b',
         },
         {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/1.d374b7a3.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
-          chip: 'New',
+          img: 'image.png',
+          title: 'Cousins',
+          subsTitle: 'Social/Family',
+        },
+        {
+          img: 'audio.png',
+          title: 'Tides',
+          subsTitle: 'Social/Vacation',
+          chip: 'Recent',
           chipColor: '#536dfe',
         },
         {
-          img:
-            'https://templates-flatlogic.herokuapp.com/vue-material/img/2.e73e87dc.png',
-          title: 'Trainers',
-          subsTitle: 'Trainers in white',
-          money: '78',
-          star: '4.6',
+          img: 'document.jpeg',
+          title: 'Template',
+          subsTitle: 'Work/UX',
+          chip: 'Recent',
+          chipColor: '#536dfe',
+        },
+        {
+          img: 'image.png',
+          title: 'Profile',
+          subsTitle: 'Social/Facebook',
+        },
+        {
+          img: 'image.jpeg',
+          title: 'Mockup',
+          subsTitle: 'Work/Design',
+          chip: 'Starred',
+          chipColor: '#ff699b',
+        },
+        {
+          img: 'video.png',
+          title: 'Tutorial',
+          subsTitle: 'Work/Illustrations',
         },
       ],
     }
   },
   created() {
-    // console.log(this.$router.push('/dashboard'))
+    // console.log(this.$router.push('/'))
   },
   methods: {
     updateValue(val, index) {
