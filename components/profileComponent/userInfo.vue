@@ -9,7 +9,7 @@
             <div class="avatar-wrapper">
               <v-img
                 class="user-avatar"
-                src="https://static-cdn.jtvnw.net/jtv_user_pictures/f7e91458-8697-4d19-ad45-955ce759a3b9-profile_image-300x300.png"
+                src="foldshare-avatar.png"
                 contain
               ></v-img>
             </div>
