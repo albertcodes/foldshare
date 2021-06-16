@@ -6,7 +6,7 @@
           <p class="text-h5">Social</p>
           <v-text-field
             v-model="form.faceBook"
-            label="FackBook"
+            label="FaceBook"
             outlined
             clearable
             dense
