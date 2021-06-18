@@ -1,4 +1,3 @@
-// 公共方法
 import Vue from 'vue'
 
 var common = {
