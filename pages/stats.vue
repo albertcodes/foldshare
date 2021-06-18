@@ -46,12 +46,12 @@
       </div>
     </div>
     <div class="row mt-6">
-      <div class="col-md-4 col-12" v-for="(i, index) in 3" :key="index">
+      <div class="col-md-4 col-12" v-for="(i, index) in 1" :key="index">
         <v-hover v-slot="{ hover }">
           <v-card class="mx-auto" color="grey lighten-4" max-width="600">
             <v-img
               :aspect-ratio="16 / 9"
-              src="https://cdn.vuetifyjs.com/images/cards/kitchen.png"
+              src="foldshare.png"
             >
               <v-expand-transition>
                 <div
@@ -59,7 +59,7 @@
                   class="d-flex transition-fast-in-fast-out orange darken-2 v-card--reveal display-3 white--text"
                   style="height: 100%"
                 >
-                  $14.99
+                  FoldShare
                 </div>
               </v-expand-transition>
             </v-img>
@@ -73,17 +73,18 @@
                 right
                 top
               >
-                <v-icon>mdi-cart</v-icon>
+                <v-icon>mdi-folder</v-icon>
               </v-btn>
               <div class="font-weight-light grey--text title mb-2">
-                For the perfect meal
+                Share files conviniently!
               </div>
               <h3 class="display-1 font-weight-light orange--text mb-2">
-                QW cooking utensils
+                FoldShare Inc.
               </h3>
               <div class="font-weight-light title mb-2" style="color: #999">
-                Our Vintage kitchen utensils delight any chef.<br />
-                Made of bamboo by hand
+                Our file sharing applications offers top tier features.
+                Provide your reviews, questions or suggestions at: <br />
+                <i>foldshareinc.org/support</i>
               </div>
             </v-card-text>
           </v-card>
@@ -99,38 +100,39 @@ export default {
     return {
       fourArray: [
         {
-          color: 'rgb(253, 154, 19)',
-          titleIcon: 'sofa-single',
-          name: 'Booking',
-          nums: '184',
-          actionsIcon: 'alert',
-          actionsText: 'Get More Space...',
+          color: '#00cae3',
+          titleIcon: 'account-group',
+          name: 'Users',
+          nums: 'Over 200+',
+          actionsIcon: 'calendar-range',
+          actionsText: 'Active monthly users',
         },
         {
           color: '#e91e63',
-          titleIcon: 'chart-bar',
-          name: 'Website Visits',
-          nums: '75.521',
-          actionsIcon: 'tag',
-          actionsText: 'Tracked from Google Analytics',
+          titleIcon: 'animation',
+          name: 'Files',
+          nums: 'Over 25K',
+          actionsIcon: 'cloud',
+          actionsText: 'Monthly hosted files',
         },
         {
           color: '#4caf50',
-          titleIcon: 'store',
-          name: 'Revenue',
-          nums: '$34,245',
-          actionsIcon: 'calendar-range',
-          actionsText: 'Last 24 Hours',
+          titleIcon: 'account-switch',
+          name: 'Groups',
+          nums: 'Over 100+',
+          actionsIcon: 'trending-up',
+          actionsText: 'Active sharing groups',
         },
         {
-          color: '#00cae3',
-          titleIcon: 'twitter',
-          name: 'Followers',
-          nums: '+245',
-          actionsIcon: 'history',
-          actionsText: 'Just Updated',
+          color: 'rgb(253, 154, 19)',
+          titleIcon: 'arrange-send-backward',
+          name: 'Projects',
+          nums: '2 Average',
+          actionsIcon: 'hammer',
+          actionsText: 'Average projects per user',
         },
       ],
+      cardNumber: 4
     }
   },
 }
