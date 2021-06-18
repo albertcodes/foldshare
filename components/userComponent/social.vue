@@ -23,16 +23,18 @@
             hint="Please enter your Twitter link"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.instagram"
-            label="instagram"
+            label="Instagram"
             clearable
             outlined
             dense
             hint="Please enter your Instagram link"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.gitHub"
@@ -43,16 +45,18 @@
             hint="Please enter your GitHub link"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
-            v-model="form.codePen"
-            label="CodePen"
+            v-model="form.other"
+            label="Other social links"
             outlined
             dense
             clearable
-            hint="Please enter your user codePen"
+            hint="Please enter any custom link"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
         </v-form>
         <div class="d-flex justify-space-between">
@@ -73,10 +77,10 @@ export default {
         twitter: '',
         instagram: '',
         gitHub: '',
-        codePen: '',
+        other: '',
         slack: '',
       },
-      items: ['Admin', 'Tourist'],
+      items: ['Admin', 'User'],
     }
   },
 }
