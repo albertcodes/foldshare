@@ -5,32 +5,51 @@
         <v-card-text>
           <div class="row no-gutters">
             <div
-              class="d-flex justify-space-between justify-md-start col-md-6 col-12"
+              class="
+                d-flex
+                justify-space-between justify-md-start
+                col-md-10 col-12
+              "
             >
-              <v-btn color="success" class="mr-2" @click="toAddUser">
-                <v-icon left dark> mdi-plus </v-icon>
-                ADD
-              </v-btn>
-              <v-btn outlined color="indigo">
-                <v-icon>mdi-filter-variant</v-icon>
+              <v-btn outlined color="yellow">
+                <v-icon class="mr-2">mdi-filter-variant</v-icon>
                 Filters
               </v-btn>
-            </div>
-            <div class="d-flex justify-end mt-3 mt-md-0 col-md-6 col-12">
-              <v-btn outlined color="#ff5c93">
-                <v-icon>mdi-download</v-icon>
-                Download
-              </v-btn>
-            </div>
-            <div class="d-flex justify-end mt-3 col col-12">
-              <div style="width: 250px">
+              <div class="ml-8">
+                <v-file-input
+                  placeholder="Upload file"
+                  accept="image/*"
+                  single-line
+                  filled
+                  rounded
+                  dense
+                  append-icon="mdi-upload"
+                  clear-icon="mdi-close-circle"
+                  clearable
+                  color="white"
+                  hide-details
+                ></v-file-input>
+              </div>
+              <div class="ml-8">
                 <v-text-field
-                  solo
-                  label="Search"
-                  hide-details="false"
-                  prepend-inner-icon="mdi-magnify"
+                  placeholder="Search file"
+                  single-line
+                  filled
+                  rounded
+                  dense
+                  append-icon="mdi-magnify"
+                  clear-icon="mdi-close-circle"
+                  clearable
+                  color="white"
+                  hide-details
                 ></v-text-field>
               </div>
+            </div>
+            <div class="d-flex justify-end mt-3 mt-md-0 col-md-2 col-12">
+              <v-btn outlined color="pink">
+                <v-icon class="mr-2">mdi-download</v-icon>
+                Download
+              </v-btn>
             </div>
           </div>
         </v-card-text>
@@ -63,15 +82,14 @@ export default {
       sortDesc: false,
       headers: [
         {
-          text: 'Dessert (100g serving)',
+          text: 'Filename',
           align: 'start',
           value: 'name',
         },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
-        { text: 'Iron (%)', value: 'iron' },
+        { text: 'Shares', value: 'shares' },
+        { text: 'Size (MB)', value: 'size' },
+        { text: 'Folders', value: 'folders' },
+        { text: 'Usage (%)', value: 'usage' },
       ],
       tableList: [],
       tableLoading: true,
@@ -86,94 +104,84 @@ export default {
         this.tableLoading = false
         this.tableList = [
           {
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: '1%',
+            name: 'IMG_vacation99852.jpg',
+            shares: 9,
+            size: 6.1,
+            folders: 1,
+            usage: '0.61%',
           },
           {
-            name: 'Ice cream sandwich',
-            calories: 237,
-            fat: 9.0,
-            carbs: 37,
-            protein: 4.3,
-            iron: '1%',
+            name: 'IMG_2020yearhasbeen.jpg',
+            shares: 5,
+            size: 7.2,
+            folders: 0,
+            usage: '0.72%',
           },
           {
-            name: 'Eclair',
-            calories: 262,
-            fat: 16.0,
-            carbs: 23,
-            protein: 6.0,
-            iron: '7%',
+            name: 'Design_elements.doc',
+            shares: 3,
+            size: 12.9,
+            folders: 2,
+            usage: '1.29%',
           },
           {
-            name: 'Cupcake',
-            calories: 305,
-            fat: 3.7,
-            carbs: 67,
-            protein: 4.3,
-            iron: '8%',
+            name: 'IMG_3237821_43270.jpg',
+            shares: 0,
+            size: 2.3,
+            folders: 0,
+            usage: '0.23%',
           },
           {
-            name: 'Gingerbread',
-            calories: 356,
-            fat: 16.0,
-            carbs: 49,
-            protein: 3.9,
-            iron: '16%',
+            name: 'Tutorial_document.pdf',
+            shares: 4,
+            size: 9.0,
+            folders: 2,
+            usage: '0.90%',
           },
           {
-            name: 'Jelly bean',
-            calories: 375,
-            fat: 0.0,
-            carbs: 94,
-            protein: 0.0,
-            iron: '0%',
+            name: 'Tutorial_video.mp4',
+            shares: 4,
+            size: 166.7,
+            folders: 2,
+            usage: '16.7%',
           },
           {
-            name: 'Lollipop',
-            calories: 392,
-            fat: 0.2,
-            carbs: 98,
-            protein: 0,
-            iron: '2%',
+            name: 'Summer_on_the_beach.mp4',
+            shares: 3,
+            size: 301.0,
+            folders: 1,
+            usage: '30.1%',
           },
           {
-            name: 'Honeycomb',
-            calories: 408,
-            fat: 3.2,
-            carbs: 87,
-            protein: 6.5,
-            iron: '45%',
+            name: 'IMG_1236821_23213.jpg',
+            shares: 1,
+            size: 6.0,
+            folders: 0,
+            usage: '0.60%',
           },
           {
-            name: 'Donut',
-            calories: 452,
-            fat: 25.0,
-            carbs: 51,
-            protein: 4.9,
-            iron: '22%',
+            name: 'End_of_month_meeting.mp3',
+            shares: 2,
+            size: 48.4,
+            folders: 3,
+            usage: '4.84%',
           },
           {
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: '6%',
+            name: 'IMG_4236821_43252.jpg',
+            shares: 1,
+            size: 6.8,
+            folders: 1,
+            usage: '0.68%',
           },
         ]
       }, 2000)
     },
-    toAddUser() {
-      this.$router.push('/user')
-    }
   },
 }
 </script>
 
 <style scoped>
+.v-file-input__control {
+  display: none;
+}
 </style>
