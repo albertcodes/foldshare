@@ -13,7 +13,7 @@
           v-for="item in items"
           :key="item.text"
           :to="item.link"
-          color="primary"
+          color="yellow"
         >
           <v-list-item-action>
             <v-icon>mdi-{{ item.icon }}</v-icon>
@@ -43,6 +43,9 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
+      <v-btn icon href="/">
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -90,32 +93,29 @@
         </template>
         <emailMenu :emailMsg="emailMsg" />
       </v-menu>
-
-      <v-btn fab dark small v-if="isLogin" @click="toLogin">
-        <v-icon>mdi-account-circle</v-icon>
-      </v-btn>
-      <v-menu offset-y rounded="lg" transition="fab-transition" v-else>
+      <v-menu offset-y rounded="lg" transition="fab-transition">
         <template v-slot:activator="{ on, attrs }">
-          <span style="margin-left: 5px">Hi,{{ username }}</span>
-          <v-avatar dark v-bind="attrs" v-on="on">
-            <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+          <span style="margin-left: 5px">Hello, {{ username }}</span>
+          <v-avatar dark v-bind="attrs" v-on="on" height="25" width="25">
+            <img src="foldshare-avatar.png" alt="avatar" />
           </v-avatar>
         </template>
-        <v-list rounded>
-          <v-list-item-group v-model="selectedItem" color="primary">
-            <v-list-item
-              v-for="(avatar, index) in avatarList"
-              :key="index"
-              @click="handleAvatar(index)"
-            >
-              <v-list-item-icon>
-                <v-icon v-text="avatar.icon"></v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title v-text="avatar.text"></v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
+        <v-list rounded dense>
+          <v-list-item
+            v-for="item in avatarLinks"
+            :key="item.text"
+            :to="item.link"
+            color="yellow"
+          >
+            <v-list-item-action>
+              <v-icon>mdi-{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.text }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -143,7 +143,7 @@
             </v-btn>
           </div>
           <div>
-            <h6>Copyright &copy; {{currentYear()}}&nbsp;FoldShare Inc.</h6>
+            <h6>Copyright &copy; {{ currentYear() }}&nbsp;FoldShare Inc.</h6>
           </div>
         </div>
       </v-footer>
@@ -208,13 +208,12 @@ export default {
           text: 'Sharing',
           link: '/sharing',
         },
-        { icon: 'delete-outline', text: 'Trash', link: '/trash' },
+        { icon: 'delete', text: 'Trash', link: '/trash' },
         { icon: 'power', text: 'Exit App', link: '/exit' },
       ],
-      avatarList: [
-        { text: 'Real-Time', icon: 'mdi-clock' },
-        { text: 'Audience', icon: 'mdi-account' },
-        { text: 'Conversions', icon: 'mdi-flag' },
+      avatarLinks: [
+        { icon: 'account', text: 'Register', link: '/user' },
+        { icon: 'alert', text: 'Report Problem', link: '/report' },
       ],
       breadcrumbs: [
         {
@@ -236,7 +235,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      username: 'Guest User',
+      username: 'Guest',
       emailMsg: 1,
       bellMsg: 3,
       selectedItem: '',
@@ -275,12 +274,12 @@ export default {
     },
   },
   // Get current year
-    methods: {
+  methods: {
     currentYear() {
-      const current = new Date();
-      const date = `${current.getFullYear()}`;
-      return date;
-    }
-  }
+      const current = new Date()
+      const date = `${current.getFullYear()}`
+      return date
+    },
+  },
 }
 </script>
