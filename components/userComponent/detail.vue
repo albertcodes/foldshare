@@ -4,12 +4,6 @@
       <div class="col-md-6 col-12">
         <v-form ref="form">
           <p class="text-h5">Create User Details</p>
-          <v-file-input
-            class="mb-4"
-            accept="image/*"
-            label="File input"
-            clearable
-          ></v-file-input>
           <v-text-field
             v-model="form.firstName"
             label="First name"
@@ -19,6 +13,7 @@
             hint="Please enter your user first name"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.lastName"
@@ -29,6 +24,7 @@
             hint="Please enter your user last name"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.address"
@@ -39,6 +35,7 @@
             hint="Please enter your user address"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.password"
@@ -49,6 +46,7 @@
             hint="Please enter your user password"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-select
             :items="items"
@@ -59,6 +57,7 @@
             hint="Please select your user role"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-select>
         </v-form>
         <div class="d-flex justify-space-between">
@@ -81,7 +80,7 @@ export default {
         password: '',
         role: '',
       },
-      items: ['Admin', 'Tourist'],
+      items: ['Admin', 'User'],
     }
   },
 }
