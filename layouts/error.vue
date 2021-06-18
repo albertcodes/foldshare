@@ -13,7 +13,6 @@
     <h1 v-else>
       {{ otherError }}
     </h1>
-    <!-- <NuxtLink to="/"> Home page </NuxtLink> -->
     <div class="home col-12 d-flex flex-nowrap justify-space-between">
       <div class="col-4"></div>
       <div class="col-4 d-flex justify-center">
