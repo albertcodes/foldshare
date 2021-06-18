@@ -17,7 +17,7 @@
               folders and files, plus renewable yearly access to new features,
               software updates and support.
             </p>
-            <v-btn color="yellow" type="button" style="color: black">
+            <v-btn color="yellow" type="button" style="color: black" href="/inspire">
               <v-icon right class="mr-2"> mdi-star </v-icon>
               Subscribe Now!
             </v-btn>
