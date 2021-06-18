@@ -25,9 +25,9 @@
       <v-card-text class="pa-5 pt-0">
         <div class="row no-gutters">
           <div class="col-sm-6 col-md-5 col-lg-5 col-xl-3 col-5">
-            <div class="views-value greyBold--text text-h6 mb-0">Used: 506MB</div><br>
-            <div class="views-percent error--text mb-4">49.3% of 999MB left</div>
-            <v-btn class="ma-2" small outlined color="green">Buy More</v-btn>
+            <div class="views-value greyBold--text text-h6 mb-0">Used: 566.4MB</div><br>
+            <div class="views-percent error--text mb-4">43.3% of 999MB left</div>
+            <v-btn class="ma-2" small outlined color="green" href="/sharing">Buy More</v-btn>
           </div>
           <div
             class="d-flex align-end col-sm-6 col-md-5 col-lg-5 col-xl-8 offset-sm-0 offset-md-2 offset-lg-2 offset-xl-1 col-6 offset-1"
