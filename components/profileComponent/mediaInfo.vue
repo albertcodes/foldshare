@@ -72,7 +72,7 @@ export default {
           color: 'pink',
         },
         {
-          icon: 'account-multiple-plus-outline',
+          icon: 'account-switch-outline',
           nums: '3',
           name: 'Groups',
           color: 'pink',
