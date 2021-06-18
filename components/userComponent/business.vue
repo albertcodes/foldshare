@@ -13,6 +13,7 @@
             hint="Please enter your company name"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.registeredId"
@@ -23,6 +24,7 @@
             hint="Please enter your company registered ID"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.email"
@@ -33,6 +35,7 @@
             hint="Please enter your company email"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
           <v-text-field
             v-model="form.contact"
@@ -43,6 +46,7 @@
             hint="Enter your company contact"
             persistent-hint
             class="mb-4"
+            color="yellow"
           ></v-text-field>
         </v-form>
         <div class="d-flex justify-space-between">
@@ -64,7 +68,7 @@ export default {
         email: '',
         contact: '',
       },
-      items: ['Admin', 'Tourist'],
+      items: ['Admin', 'User'],
     }
   },
 }
