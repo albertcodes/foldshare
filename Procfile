@@ -1,1 +1,1 @@
-web:node nuxt.config.js
+web: node nuxt.config.js

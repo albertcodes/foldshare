@@ -16,5 +16,8 @@
     "@nuxt/types": "^2.15.3",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.11.3"
+  },
+  "engines": {
+    "node": "12.13.0"
   }
 }
